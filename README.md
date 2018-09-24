@@ -9,3 +9,4 @@ Implement my own version of Star Force game of NES. Use Unity 3d Space Shooter t
 
 ### Copyright and source    
 The spaceship image source is from an open-source: https://opengameart.org/content/some-top-down-spaceships    
+The Star Wars space theme sprite and background source: https://scratch.mit.edu/projects/16809976/    
