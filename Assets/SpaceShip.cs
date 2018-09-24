@@ -5,13 +5,12 @@ using UnityEngine;
 public class SpaceShip : MonoBehaviour {
 	
 	public float speed;
-	private float minX = -5;
-	private float maxX = 5;
-	private float minY = -5;
-	private float maxY = 5;
+	private float limitX = 6;
+	private float limitY = 4;
+	Rigidbody2D ssRigidbody;
 	// Use this for initialization
 	void Start () {
-		
+		ssRigidbody = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +19,12 @@ public class SpaceShip : MonoBehaviour {
 		float vertical = Input.GetAxis("Vertical");
 		Vector2 movement = new Vector2(horizontal, vertical);
 		
-		GetComponent<Rigidbody2D>().velocity = movement * speed;
+		ssRigidbody.velocity = movement * speed;
+
+		ssRigidbody.position = new Vector3(
+			Mathf.Clamp(ssRigidbody.position.x, -limitX, limitX), 
+			Mathf.Clamp(ssRigidbody.position.y, -limitY, limitY),
+			0.0f
+		);
 	}
 }
