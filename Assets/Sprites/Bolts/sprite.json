@@ -1,0 +1,54 @@
+{
+	"objName": "Bolt",
+	"scripts": [[16,
+			78,
+			[["whenGreenFlag"],
+				["doForever",
+					[["doIfElse",
+							["=", ["readVariable", "page"], "10"],
+							[["show"], ["nextCostume"], ["wait:elapsed:from:", 0.1]],
+							[["hide"]]]]]]]],
+	"costumes": [{
+			"costumeName": "costume1",
+			"baseLayerID": 0,
+			"baseLayerMD5": "a2ccddd85bfda2bec4e79b1f1e46ca74.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 37,
+			"rotationCenterY": 2
+		},
+		{
+			"costumeName": "blocked1",
+			"baseLayerID": 1,
+			"baseLayerMD5": "391d81230c00dabb9e5b5da79e7ec8b7.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 38,
+			"rotationCenterY": 18
+		},
+		{
+			"costumeName": "blocked2",
+			"baseLayerID": 2,
+			"baseLayerMD5": "291fe7ce48fe001e983364a6dbabbcf6.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 44,
+			"rotationCenterY": 34
+		},
+		{
+			"costumeName": "blocked3",
+			"baseLayerID": 3,
+			"baseLayerMD5": "419f5b9b5df7c4ca1b5c9ef5d5982821.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 52,
+			"rotationCenterY": 34
+		}],
+	"currentCostumeIndex": 1,
+	"scratchX": 0,
+	"scratchY": 0,
+	"scale": 2.00000000023283,
+	"direction": 96.581944655178,
+	"rotationStyle": "leftRight",
+	"isDraggable": false,
+	"indexInLibrary": 100000,
+	"visible": true,
+	"spriteInfo": {
+	}
+}
