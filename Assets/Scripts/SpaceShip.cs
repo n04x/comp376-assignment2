@@ -8,6 +8,12 @@ public class SpaceShip : MonoBehaviour {
 	private float HORIZONTAL_LIMIT = 6;
 	private float VERTICAL_LIMIT = 4;
 	Rigidbody2D ssRigidbody;
+
+	public GameObject shot;
+	public Transform shotSpawn;
+	public float fireRate;
+
+	private float nextFire;
 	// Use this for initialization
 	void Start () {
 		ssRigidbody = GetComponent<Rigidbody2D>();
@@ -15,6 +21,11 @@ public class SpaceShip : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// instantiate our shooting of bolt.
+		if(Input.GetKeyDown("space") && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		}
 		// move our space ship around
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");
