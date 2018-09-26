@@ -6,17 +6,20 @@ public class GameController : MonoBehaviour {
 	
 	public GameObject enemyA;
 	public Vector3 spawnPosition;
-	public int wavesA;
+	float startWait = 1.0f;
+	float spawnWait = 5.0f;
 	
 	void Start() {
-		SpawnEnemyA();
+		StartCoroutine(SpawnEnemyA());
+		// SpawnEnemyA();
 	}
 
-	void SpawnEnemyA() {
-
-		for(;;) {
+	IEnumerator SpawnEnemyA() {
+		yield return new WaitForSeconds(startWait);
+		for(int i = 0; i < 3; i++) {
 			Quaternion spawnRotation = Quaternion.identity;
 			Instantiate(enemyA, spawnPosition, spawnRotation);
-		} 
+			yield return new WaitForSeconds(spawnWait);
+		}
 	}
 }
