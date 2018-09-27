@@ -1,0 +1,38 @@
+{
+	"objName": "Star Destroyer",
+	"scripts": [[20,
+			20,
+			[["whenGreenFlag"],
+				["doForever",
+					[["doIfElse",
+							["=", ["readVariable", "page"], "11"],
+							[["show"], ["nextCostume"], ["wait:elapsed:from:", 0.1]],
+							[["hide"]]]]]]]],
+	"costumes": [{
+			"costumeName": "costume1",
+			"baseLayerID": 0,
+			"baseLayerMD5": "1ebab3defcb249a1b3aac0ebfbdcb2a9.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 154,
+			"rotationCenterY": 96
+		},
+		{
+			"costumeName": "costume2",
+			"baseLayerID": 1,
+			"baseLayerMD5": "16fcd7076d248cd803d91fecc9408c10.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 154,
+			"rotationCenterY": 96
+		}],
+	"currentCostumeIndex": 1,
+	"scratchX": 0,
+	"scratchY": 0,
+	"scale": 1.0000000002328306,
+	"direction": 90,
+	"rotationStyle": "normal",
+	"isDraggable": false,
+	"indexInLibrary": 100000,
+	"visible": true,
+	"spriteInfo": {
+	}
+}

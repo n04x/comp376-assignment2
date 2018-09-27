@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoltMover : MonoBehaviour {
+public class Mover : MonoBehaviour {
 	Rigidbody2D bRigidbody2D;
 	public float speed;
 	// Use this for initialization
