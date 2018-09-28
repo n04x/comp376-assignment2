@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
 	float startWait = 1.0f;
 	float tie_fighter_spawnWait = 8.0f;
 	float star_destroyer_startWait = 20.0f;
-	float star_destroyer_spawnWait = 4.0f;
+	// float star_destroyer_spawnWait = 4.0f;
 	
 	void Start() {
 		StartCoroutine(SpawnTIEFighter());
