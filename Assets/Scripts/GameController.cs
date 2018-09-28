@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
 	public Vector3 tie_fighter_spawn_pos;
 	public Vector3 star_destroyer_spawn_pos;
 	float startWait = 1.0f;
-	float tie_fighter_spawnWait = 5.0f;
+	float tie_fighter_spawnWait = 8.0f;
 	float star_destroyer_startWait = 2.0f;
 	float star_destroyer_spawnWait = 4.0f;
 	
@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator SpawnTIEFighter() {
 		yield return new WaitForSeconds(startWait);
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 2; i++) {
 			Quaternion spawnRotation = Quaternion.identity;
 			Instantiate(tie_fighter_object, tie_fighter_spawn_pos, spawnRotation);
 			yield return new WaitForSeconds(tie_fighter_spawnWait);
