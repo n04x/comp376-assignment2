@@ -150,7 +150,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &516990269
 Transform:
   m_ObjectHideFlags: 0
@@ -247,8 +247,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tie_fighter_object: {fileID: 1306163136778830, guid: 2caf811a929664256a5d84f080fa70e2,
-    type: 2}
-  star_destroyer_object: {fileID: 1635412441894552, guid: 1215bf646d44949a69955a9cbff856e8,
     type: 2}
   tie_fighter_spawn_pos: {x: 0, y: 12, z: 0}
   star_destroyer_spawn_pos: {x: -3, y: 6, z: 0}
