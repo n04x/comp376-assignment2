@@ -10,22 +10,22 @@ public class StarDestroyer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sdrgb2d = GetComponent<Rigidbody2D>();
-		sdrgb2d.velocity = transform.right * speed;		
+		// sdrgb2d.velocity = transform.right * speed;		
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		// if(transform.position.x >= 8) {
-		// 	direction = false;
-		// } else if(transform.position.x <= -8) {
-		// 	direction = true;
-		// }
-		// if(direction) {
-		// 	sdrgb2d.velocity = transform.right * speed;		
-		// } else {
-		// 	sdrgb2d.velocity = -transform.right * speed;
-		// }
+		if(transform.position.x >= 8) {
+			direction = false;
+		} else if(transform.position.x <= -8) {
+			direction = true;
+		}
+		if(direction) {
+			sdrgb2d.velocity = transform.right * speed;		
+		} else {
+			sdrgb2d.velocity = -transform.right * speed;
+		}
 	}
 }
