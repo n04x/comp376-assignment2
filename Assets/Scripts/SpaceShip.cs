@@ -13,10 +13,12 @@ public class SpaceShip : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 
+	AudioSource ssLaserSound;
 	private float nextFire;
 	// Use this for initialization
 	void Start () {
 		ssRigidbody = GetComponent<Rigidbody2D>();
+		ssLaserSound = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class SpaceShip : MonoBehaviour {
 		if(Input.GetKeyDown("space") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			ssLaserSound.Play();
 		}
 		// move our space ship around
 		float horizontal = Input.GetAxis("Horizontal");
