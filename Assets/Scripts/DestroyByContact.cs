@@ -10,7 +10,7 @@ public class DestroyByContact : MonoBehaviour {
 		if(other.tag == "Boundary") {
 			return;
 		}
-		Instantiate(explosion, transform.position, transform.rotation);
+		Instantiate(explosion, transform.position, Quaternion.identity);
 		Destroy(other.gameObject);
 		Destroy(gameObject);
 		Destroy(explosion);
