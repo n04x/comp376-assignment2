@@ -8,18 +8,19 @@ public class GameController : MonoBehaviour {
 	public GameObject tie_fighter_object;
 	public GameObject star_destroyer_object;
 	public GameObject death_star_object;
-
+	public GameObject blue_shield_object;
+	public GameObject red_shield_object;
 	public Text score_board;
 	
 	public Vector3 tie_fighter_spawn_pos;
 	public Vector3 star_destroyer_spawn_pos;
 	public Vector3 death_star_spawn_pos;
-
+	public Vector3 shield_pos;
 	float startWait = 1.0f;
 	float tie_fighter_spawnWait = 8.0f;
 	float star_destroyer_startWait = 20.0f;
 	float death_star_startWait = 40.0f;
-
+	
 	private int score;
 	
 	void Start() {
@@ -28,9 +29,9 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(SpawnTIEFighter());
 		StartCoroutine(SpawnStarDestroyer());
 		StartCoroutine(SpawnDeathStar());
-		// SpawnEnemyA();
+		// StartCoroutine(SpawnShield());
 	}
-
+	
 	IEnumerator SpawnTIEFighter() {
 		yield return new WaitForSeconds(startWait);
 		for(int i = 0; i < 2; i++) {
@@ -50,14 +51,21 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds(death_star_startWait);
 		Quaternion spawnRotation = Quaternion.identity;
 		Instantiate(death_star_object, death_star_spawn_pos, spawnRotation);
+	
 	}
 
+	// IEnumerator SpawnShield() {
+	// 	yield return new WaitForSeconds(death_star_startWait + 7);
+	// 	Quaternion spawnRotation = Quaternion.identity;
+	// 	Instantiate(blue_shield_object, shield_pos,spawnRotation);
+	// 	Instantiate(red_shield_object, shield_pos, spawnRotation);
+	// }
 	// this will be used for other elements in order to update our scoreboard.
 	public void AddScore(int new_score_val) {
 		score += new_score_val;
 		UpdateScore();
 	}
-
+	
 	void UpdateScore() {
 		score_board.text = "Score: " + score;
 	}

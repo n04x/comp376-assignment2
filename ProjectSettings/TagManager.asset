@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundary
+  - DeathStar
+  - Bolt
+  - Shield
   layers:
   - Default
   - TransparentFX

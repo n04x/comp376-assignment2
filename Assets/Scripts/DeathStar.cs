@@ -25,6 +25,9 @@ public class DeathStar : MonoBehaviour {
 	}
 
 	 void OnTriggerEnter2D(Collider2D other) {
+		 if(other.tag == "Shield") {
+			 return;
+		 }
 		 if(invincible) {
 			 Destroy(other.gameObject);
 		 } else {

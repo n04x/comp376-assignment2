@@ -113,6 +113,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &121953130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219551645684564, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114090996877508044, guid: 66c7ec6994f0a4cdf8afddfd3177890e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66c7ec6994f0a4cdf8afddfd3177890e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &386179702
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +423,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &591369745 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1831834935703538, guid: 66c7ec6994f0a4cdf8afddfd3177890e,
+    type: 2}
+  m_PrefabInternal: {fileID: 121953130}
+--- !u!114 &591369749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591369745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68b7b19acbaa491e9dcd9394b4ce30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1843301700182884, guid: 407fdffc13ca14004b9a7ebe98e6284f, type: 2}
 --- !u!1 &604085896
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &604085897
 Transform:
   m_ObjectHideFlags: 0
@@ -420,12 +484,17 @@ MonoBehaviour:
     type: 2}
   star_destroyer_object: {fileID: 1718286399913594, guid: 1215bf646d44949a69955a9cbff856e8,
     type: 2}
-  death_star_object: {fileID: 1539065227759814, guid: 66c7ec6994f0a4cdf8afddfd3177890e,
+  death_star_object: {fileID: 1875555425867378, guid: 66c7ec6994f0a4cdf8afddfd3177890e,
+    type: 2}
+  blue_shield_object: {fileID: 1409605862074796, guid: b906a7db4e9f94e799bcf1792f069f6f,
+    type: 2}
+  red_shield_object: {fileID: 1395256752020072, guid: d437770c181224963bf24e2b2476ea8d,
     type: 2}
   score_board: {fileID: 386179704}
   tie_fighter_spawn_pos: {x: 0, y: 12, z: 0}
   star_destroyer_spawn_pos: {x: -16, y: 16, z: 0}
   death_star_spawn_pos: {x: 0, y: 13, z: 0}
+  shield_pos: {x: 0, y: 6, z: 0.01}
 --- !u!1 &807684704
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +732,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4247243339902712, guid: 5804b78bf5c7440f8bb85106e244b32f, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4247243339902712, guid: 5804b78bf5c7440f8bb85106e244b32f, type: 2}
       propertyPath: m_LocalScale.x
