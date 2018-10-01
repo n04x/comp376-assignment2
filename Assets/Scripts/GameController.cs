@@ -8,14 +8,11 @@ public class GameController : MonoBehaviour {
 	public GameObject tie_fighter_object;
 	public GameObject star_destroyer_object;
 	public GameObject death_star_object;
-	public GameObject blue_shield_object;
-	public GameObject red_shield_object;
 	public Text score_board;
 	
 	public Vector3 tie_fighter_spawn_pos;
 	public Vector3 star_destroyer_spawn_pos;
 	public Vector3 death_star_spawn_pos;
-	public Vector3 shield_pos;
 	float startWait = 1.0f;
 	float tie_fighter_spawnWait = 8.0f;
 	float star_destroyer_startWait = 20.0f;
@@ -29,7 +26,6 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(SpawnTIEFighter());
 		StartCoroutine(SpawnStarDestroyer());
 		StartCoroutine(SpawnDeathStar());
-		// StartCoroutine(SpawnShield());
 	}
 	
 	IEnumerator SpawnTIEFighter() {
@@ -54,12 +50,6 @@ public class GameController : MonoBehaviour {
 	
 	}
 
-	// IEnumerator SpawnShield() {
-	// 	yield return new WaitForSeconds(death_star_startWait + 7);
-	// 	Quaternion spawnRotation = Quaternion.identity;
-	// 	Instantiate(blue_shield_object, shield_pos,spawnRotation);
-	// 	Instantiate(red_shield_object, shield_pos, spawnRotation);
-	// }
 	// this will be used for other elements in order to update our scoreboard.
 	public void AddScore(int new_score_val) {
 		score += new_score_val;
