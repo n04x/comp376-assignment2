@@ -8,9 +8,12 @@ public class DestroyByContact : MonoBehaviour {
 	public int score_value;
 	public int ship_number;
 	private GameController game_controller;
+	private SpaceShip space_ship;
 	
 	void Start() {
 		GameObject game_controller_object = GameObject.FindWithTag("GameController");
+		GameObject space_ship_object = GameObject.FindWithTag("Player");
+		space_ship = space_ship_object.GetComponent<SpaceShip>();
 		if(game_controller_object != null) {
 			game_controller = game_controller_object.GetComponent<GameController>();
 		}	
@@ -21,6 +24,10 @@ public class DestroyByContact : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.tag == "Boundary") {
+			return;
+		}
+		if(other.tag == "Player") {
+			space_ship.DamageTaken();
 			return;
 		}
 		game_controller.ShipDestroyed();

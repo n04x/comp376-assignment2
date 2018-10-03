@@ -10,19 +10,33 @@ public class SpaceShip : MonoBehaviour {
 	Rigidbody2D ssRigidbody;
 
 	public GameObject shot;
+	public GameObject double_shot;
+	public GameObject triple_shot;
+
+	public GameObject explosion;
 	public Transform shotSpawn;
+	public Transform double_shot_spawn;
+	public Transform triple_shot_spawn;
 	public float fireRate;
 
 	AudioSource ssLaserSound;
 	private float nextFire;
+	private int lives;
 	// Use this for initialization
 	void Start () {
+		lives = 1;
 		ssRigidbody = GetComponent<Rigidbody2D>();
 		ssLaserSound = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// Check if our ship has lives left.
+		if(lives == 0) {
+			Destroy(gameObject);
+			Instantiate(explosion, transform.position, Quaternion.identity);
+			Destroy(explosion);
+		}
 		// instantiate our shooting of bolt.
 		if(Input.GetKeyDown("space") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
@@ -41,5 +55,14 @@ public class SpaceShip : MonoBehaviour {
 			Mathf.Clamp(ssRigidbody.position.y, -VERTICAL_LIMIT, VERTICAL_LIMIT),
 			0.0f	// Since the z axis will never change we set it to 0.
 		);
+	}
+	public void DamageTaken() {
+		lives--;
+	}
+
+	public void Upgrade() {
+		Debug.Log("Upgrade called");
+		lives++;
+		Debug.Log(lives);
 	}
 }

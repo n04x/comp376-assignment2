@@ -349,7 +349,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   shot: {fileID: 1693682025318798, guid: e16250629ca814aa7a0379d519906569, type: 2}
+  double_shot: {fileID: 0}
+  triple_shot: {fileID: 0}
+  explosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73, type: 2}
   shotSpawn: {fileID: 927519617}
+  double_shot_spawn: {fileID: 0}
+  triple_shot_spawn: {fileID: 0}
   fireRate: 0.15
 --- !u!61 &516990271
 BoxCollider2D:
