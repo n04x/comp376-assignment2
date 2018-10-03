@@ -422,15 +422,14 @@ MonoBehaviour:
     type: 2}
   death_star_object: {fileID: 1875555425867378, guid: 66c7ec6994f0a4cdf8afddfd3177890e,
     type: 2}
-  blue_shield_object: {fileID: 1409605862074796, guid: b906a7db4e9f94e799bcf1792f069f6f,
-    type: 2}
-  red_shield_object: {fileID: 1395256752020072, guid: d437770c181224963bf24e2b2476ea8d,
+  r2d2_powerup_object: {fileID: 1322758975971432, guid: 9f4fb7cc5493448d3a576d4a5b4dbacc,
     type: 2}
   score_board: {fileID: 386179704}
   tie_fighter_spawn_pos: {x: 0, y: 12, z: 0}
   star_destroyer_spawn_pos: {x: -16, y: 16, z: 0}
   death_star_spawn_pos: {x: 0, y: 13, z: 0}
-  shield_pos: {x: 0, y: 6, z: 0.01}
+  r2d2_powerup_spawn_pos: {x: 0, y: 8, z: 0}
+  counter: 0
 --- !u!1 &807684704
 GameObject:
   m_ObjectHideFlags: 0

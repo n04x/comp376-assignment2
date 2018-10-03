@@ -6,6 +6,7 @@ public class DestroyByContact : MonoBehaviour {
 	
 	public GameObject explosion;
 	public int score_value;
+	public int ship_number;
 	private GameController game_controller;
 	
 	void Start() {
@@ -22,6 +23,7 @@ public class DestroyByContact : MonoBehaviour {
 		if(other.tag == "Boundary") {
 			return;
 		}
+		game_controller.ShipDestroyed();
 		Instantiate(explosion, transform.position, Quaternion.identity);
 		game_controller.AddScore(score_value);
 		Destroy(other.gameObject);
