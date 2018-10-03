@@ -10,13 +10,11 @@ public class SpaceShip : MonoBehaviour {
 	Rigidbody2D ssRigidbody;
 
 	public GameObject shot;
-	public GameObject double_shot;
-	public GameObject triple_shot;
+	public GameObject shot_level2;
+	public GameObject shot_level3;
 
 	public GameObject explosion;
 	public Transform shotSpawn;
-	public Transform double_shot_spawn;
-	public Transform triple_shot_spawn;
 	public float fireRate;
 
 	AudioSource ssLaserSound;
@@ -40,8 +38,16 @@ public class SpaceShip : MonoBehaviour {
 		// instantiate our shooting of bolt.
 		if(Input.GetKeyDown("space") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-			ssLaserSound.Play();
+			if(lives == 1) {
+				Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+				ssLaserSound.Play();
+			} else if(lives == 2) {
+				Instantiate(shot_level2, shotSpawn.position, shotSpawn.rotation);
+				ssLaserSound.Play();
+			} else {
+				Instantiate(shot_level3, shotSpawn.position, shotSpawn.rotation);
+				ssLaserSound.Play();
+			}
 		}
 		// move our space ship around
 		float horizontal = Input.GetAxis("Horizontal");
