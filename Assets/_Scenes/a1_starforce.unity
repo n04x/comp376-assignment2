@@ -360,7 +360,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -429,7 +429,6 @@ MonoBehaviour:
   star_destroyer_spawn_pos: {x: -16, y: 16, z: 0}
   death_star_spawn_pos: {x: 0, y: 13, z: 0}
   r2d2_powerup_spawn_pos: {x: 0, y: 8, z: 0}
-  counter: 0
 --- !u!1 &807684704
 GameObject:
   m_ObjectHideFlags: 0
