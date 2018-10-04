@@ -5,12 +5,14 @@ using UnityEngine;
 public class DeathStar : MonoBehaviour {
 
 	public GameObject explosion;
+	private DeathStarHealth health_point;
 	float DEATHSTAR_MOVEMENT = 7.0f;
 	float timer;
 	bool invincible = true;
 	// Use this for initialization
 	void Start () {
-
+		GameObject health_point_object = GameObject.FindWithTag("DeathStarHealth");
+		health_point = health_point_object.GetComponent<DeathStarHealth>();
 	}
 	
 	// Update is called once per frame
@@ -28,13 +30,19 @@ public class DeathStar : MonoBehaviour {
 		 if(other.tag == "Shield") {
 			 return;
 		 }
+		 if(other.tag == "Boundary") {
+			 return;
+		 }
 		 if(invincible) {
 			 Destroy(other.gameObject);
 		 } else {
-			Instantiate(explosion, transform.position, Quaternion.identity);
-		 	Destroy(other.gameObject);
-		 	Destroy(gameObject);
-		 	Destroy(explosion);
+			health_point.DamageTaken(1);
+			if(health_point.HPisZero()) {
+				Instantiate(explosion, transform.position, Quaternion.identity);
+				Destroy(other.gameObject);
+				Destroy(gameObject);
+				Destroy(explosion);
+			}
 		 }
 	}
 }

@@ -8,6 +8,7 @@ TagManager:
   - DeathStar
   - Bolt
   - Shield
+  - DeathStarHealth
   layers:
   - Default
   - TransparentFX

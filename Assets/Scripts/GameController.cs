@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 	public GameObject star_destroyer_object;
 	public GameObject death_star_object;
 	public GameObject r2d2_powerup_object;
+	public GameObject death_star_health_object;
+	
 	public Text score_board;
 	
 	public Vector3 tie_fighter_spawn_pos;
@@ -63,6 +65,7 @@ public class GameController : MonoBehaviour {
 	IEnumerator SpawnDeathStar() {
 		yield return new WaitForSeconds(death_star_startWait);
 		Quaternion spawnRotation = Quaternion.identity;
+		Instantiate(death_star_health_object, death_star_spawn_pos, spawnRotation);
 		Instantiate(death_star_object, death_star_spawn_pos, spawnRotation);
 	
 	}
