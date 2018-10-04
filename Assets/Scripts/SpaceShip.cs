@@ -8,7 +8,7 @@ public class SpaceShip : MonoBehaviour {
 	private float HORIZONTAL_LIMIT = 6;
 	private float VERTICAL_LIMIT = 4;
 	Rigidbody2D ssRigidbody;
-
+	Animator dmg_animation;
 	public GameObject shot;
 	public GameObject shot_level2;
 	public GameObject shot_level3;
@@ -20,11 +20,14 @@ public class SpaceShip : MonoBehaviour {
 	AudioSource ssLaserSound;
 	private float nextFire;
 	private int lives;
+	private bool is_invincible;
 	// Use this for initialization
 	void Start () {
-		lives = 1;
+		lives = 2;
+		is_invincible = false;
 		ssRigidbody = GetComponent<Rigidbody2D>();
 		ssLaserSound = this.GetComponent<AudioSource>();
+		dmg_animation = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -71,7 +74,9 @@ public class SpaceShip : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.tag == "EnemyBolt") {
+		if(other.tag == "EnemyBolt" && !is_invincible) {
+			Destroy(other.gameObject);
+			dmg_animation.Play("playerHit");
 			lives--;
 		}
 	}

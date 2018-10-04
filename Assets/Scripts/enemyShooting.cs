@@ -12,9 +12,9 @@ public class enemyShooting : MonoBehaviour {
 	}
 	
 	IEnumerator SpawnShot() {
-		yield return new WaitForSeconds(time_between_attack);
-		Instantiate(shot, transform.position, Quaternion.identity);			
-		
+		while(true) {
+			yield return new WaitForSeconds(time_between_attack);
+			Instantiate(shot, transform.position, Quaternion.identity);			
+		}
 	}
-	
 }

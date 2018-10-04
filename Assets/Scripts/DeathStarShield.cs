@@ -40,11 +40,11 @@ public class DeathStarShield : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.tag == "Boundary") {
+		if(other.tag == "Boundary" || other.tag == "EnemyBolt") {
 			return;
 		}
 		if(invincible) {
-			// Destroy(other.gameObject);
+			Destroy(other.gameObject);
 		} else {
 			Destroy(other.gameObject);
 			this.sprite_renderer.enabled = false;

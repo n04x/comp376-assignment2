@@ -27,10 +27,7 @@ public class DeathStar : MonoBehaviour {
 	}
 
 	 void OnTriggerEnter2D(Collider2D other) {
-		 if(other.tag == "Shield") {
-			 return;
-		 }
-		 if(other.tag == "Boundary") {
+		 if(other.tag == "Boundary" || other.tag == "EnemyBolt" || other.tag == "Shield") {
 			 return;
 		 }
 		 if(invincible) {

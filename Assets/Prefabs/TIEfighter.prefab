@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 2
+  time_between_attack: 4
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114100574500428302
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 3
+  time_between_attack: 5
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114107147550971086
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 1
+  time_between_attack: 5
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114160441584844762
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 1
+  time_between_attack: 5
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114257277469575228
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 2
+  time_between_attack: 4
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114769822037654914
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 1
+  time_between_attack: 3
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114786021900621116
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 1
+  time_between_attack: 3
   shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
   shotSpawn: {fileID: 4561554888791222}
 --- !u!114 &114898647018829376
