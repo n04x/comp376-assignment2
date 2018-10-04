@@ -23,7 +23,7 @@ public class SpaceShip : MonoBehaviour {
 	private bool is_invincible;
 	// Use this for initialization
 	void Start () {
-		lives = 2;
+		lives = 1;
 		is_invincible = false;
 		ssRigidbody = GetComponent<Rigidbody2D>();
 		ssLaserSound = this.GetComponent<AudioSource>();
