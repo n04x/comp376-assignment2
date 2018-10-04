@@ -38,6 +38,9 @@ public class SpaceShip : MonoBehaviour {
 			Instantiate(explosion, transform.position, Quaternion.identity);
 			Destroy(explosion);
 		}
+		if(is_invincible) {
+			InvincibleTrigger();
+		}
 		// instantiate our shooting of bolt.
 		if(Input.GetKeyDown("space") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
@@ -73,10 +76,15 @@ public class SpaceShip : MonoBehaviour {
 		lives++;
 	}
 
+	IEnumerator InvincibleTrigger() {
+		yield return new WaitForSeconds(1.2f);
+		is_invincible = false;
+	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "EnemyBolt" && !is_invincible) {
 			Destroy(other.gameObject);
 			dmg_animation.Play("playerHit");
+			is_invincible = true;
 			lives--;
 		}
 	}
