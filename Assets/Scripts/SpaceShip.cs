@@ -67,8 +67,6 @@ public class SpaceShip : MonoBehaviour {
 	}
 
 	public void Upgrade() {
-		Debug.Log("Upgrade called");
 		lives++;
-		Debug.Log(lives);
 	}
 }

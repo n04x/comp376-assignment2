@@ -9,6 +9,7 @@ TagManager:
   - Bolt
   - Shield
   - DeathStarHealth
+  - EnemyBolt
   layers:
   - Default
   - TransparentFX

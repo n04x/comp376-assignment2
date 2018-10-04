@@ -6,7 +6,6 @@ public class DestroyByContact : MonoBehaviour {
 	
 	public GameObject explosion;
 	public int score_value;
-	public int ship_number;
 	private GameController game_controller;
 	private SpaceShip space_ship;
 	
@@ -24,6 +23,9 @@ public class DestroyByContact : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.tag == "Boundary") {
+			return;
+		}
+		if(other.tag == "EnemyBolt") {
 			return;
 		}
 		if(other.tag == "Player") {
