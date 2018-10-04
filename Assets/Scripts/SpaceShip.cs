@@ -69,4 +69,10 @@ public class SpaceShip : MonoBehaviour {
 	public void Upgrade() {
 		lives++;
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.tag == "EnemyBolt") {
+			lives--;
+		}
+	}
 }
