@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/main_menu.unity
+    guid: 44ed5d3adf5094035800286bc479c0ca
+  - enabled: 1
+    path: Assets/_Scenes/normal_mode.unity
+    guid: 33c4ea56570854667becaa0184e4d98b
+  - enabled: 1
+    path: Assets/_Scenes/bullet_hell.unity
+    guid: ca356cd7d19d94a3c985ac3ced3a6a95
   m_configObjects: {}
