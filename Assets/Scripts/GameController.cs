@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	public GameObject death_star_object;
 	public GameObject r2d2_powerup_object;
 	public GameObject death_star_health_object;
-	
+
 	public Text score_board;
 	
 	public Vector3 tie_fighter_spawn_pos;

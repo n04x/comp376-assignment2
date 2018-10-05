@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyByContact : MonoBehaviour {
 	
 	public GameObject explosion;
+	GameObject explosion_temp;
 	public int score_value;
 	private GameController game_controller;
 	private SpaceShip space_ship;
@@ -33,10 +34,10 @@ public class DestroyByContact : MonoBehaviour {
 			return;
 		}
 		game_controller.ShipDestroyed();
-		Instantiate(explosion, transform.position, Quaternion.identity);
+		explosion_temp = Instantiate(explosion, transform.position, Quaternion.identity);
 		game_controller.AddScore(score_value);
 		Destroy(other.gameObject);
 		Destroy(gameObject);
-		Destroy(explosion);
+		Destroy(explosion_temp);
 	}
 }

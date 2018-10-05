@@ -12,7 +12,7 @@ public class SpaceShip : MonoBehaviour {
 	public GameObject shot;
 	public GameObject shot_level2;
 	public GameObject shot_level3;
-
+	GameObject space_ship_explosion_temp;
 	public GameObject explosion;
 	public Transform shotSpawn;
 	public float fireRate;
@@ -35,8 +35,8 @@ public class SpaceShip : MonoBehaviour {
 		// Check if our ship has lives left.
 		if(lives == 0) {
 			Destroy(gameObject);
-			Instantiate(explosion, transform.position, Quaternion.identity);
-			Destroy(explosion);
+			space_ship_explosion_temp = Instantiate(explosion, transform.position, Quaternion.identity);
+			Destroy(space_ship_explosion_temp);
 		}
 		if(is_invincible) {
 			InvincibleTrigger();
