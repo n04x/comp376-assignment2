@@ -39,6 +39,8 @@ public class DeathStar : MonoBehaviour {
 				Destroy(other.gameObject);
 				Destroy(gameObject);
 				Destroy(explosion);
+			} else {
+				Destroy(other.gameObject);
 			}
 		 }
 	}
