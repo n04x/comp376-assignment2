@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212562841623125260}
   - component: {fileID: 114508392546237068}
   - component: {fileID: 61410229884789842}
-  - component: {fileID: 114088784788342324}
   - component: {fileID: 82127504494845948}
+  - component: {fileID: 114152639742631132}
   m_Layer: 0
   m_Name: stardestroyer
   m_TagString: Untagged
@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 212085407912723004}
   - component: {fileID: 114255322460344928}
   - component: {fileID: 61586608744747310}
-  - component: {fileID: 114213993604089470}
   - component: {fileID: 82929232719312914}
+  - component: {fileID: 114905001952721082}
   m_Layer: 0
   m_Name: stardestroyer (4)
   m_TagString: Untagged
@@ -62,8 +62,8 @@ GameObject:
   - component: {fileID: 212151519541769306}
   - component: {fileID: 114235600663052356}
   - component: {fileID: 61325434334413946}
-  - component: {fileID: 114512812671708242}
   - component: {fileID: 82027594001631278}
+  - component: {fileID: 114932512790938436}
   m_Layer: 0
   m_Name: stardestroyer (3)
   m_TagString: Untagged
@@ -82,10 +82,25 @@ GameObject:
   - component: {fileID: 212667767652790532}
   - component: {fileID: 114121290525056726}
   - component: {fileID: 61772575340946116}
-  - component: {fileID: 114413387572411448}
   - component: {fileID: 82255705832435284}
+  - component: {fileID: 114774630655912768}
   m_Layer: 0
   m_Name: stardestroyer (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1489884870287790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4487462700546324}
+  m_Layer: 0
+  m_Name: Shot Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4149086621636132}
   m_Layer: 0
-  m_Name: Shot Spawn
+  m_Name: Shot Spawn (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,8 +149,8 @@ GameObject:
   - component: {fileID: 212727681045067988}
   - component: {fileID: 114023606731883988}
   - component: {fileID: 61180950099876022}
-  - component: {fileID: 114632524676365558}
   - component: {fileID: 82183689692131482}
+  - component: {fileID: 114983262322140448}
   m_Layer: 0
   m_Name: stardestroyer (2)
   m_TagString: Untagged
@@ -162,12 +177,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1698584244831654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4772127163911446}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4300122372178670
 Transform:
@@ -181,6 +196,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4772127163911446}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4487462700546324
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489884870287790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: -0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4772127163911446}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4634364486738438
 Transform:
@@ -215,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718286399913594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4634364486738438}
@@ -223,6 +251,7 @@ Transform:
   - {fileID: 4999178072382464}
   - {fileID: 4111108641892630}
   - {fileID: 4300122372178670}
+  - {fileID: 4487462700546324}
   - {fileID: 4149086621636132}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -873,20 +902,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1137423131854234, guid: 2138b97d699194f8d93ac046c28549f2, type: 2}
   score_value: 200
---- !u!114 &114088784788342324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1049078617899616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time_between_attack: 1
-  shot: {fileID: 1415358122346260, guid: 4906edd1c7d434100a1d9380d697257c, type: 2}
-  shotSpawn: {fileID: 4149086621636132}
 --- !u!114 &114121290525056726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -900,20 +915,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1137423131854234, guid: 2138b97d699194f8d93ac046c28549f2, type: 2}
   score_value: 200
---- !u!114 &114213993604089470
+--- !u!114 &114152639742631132
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1058674273012426}
+  m_GameObject: {fileID: 1049078617899616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af3afc3b7d6447aa80ec6613be3f0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 5
-  shot: {fileID: 1415358122346260, guid: 4906edd1c7d434100a1d9380d697257c, type: 2}
-  shotSpawn: {fileID: 4149086621636132}
+  time_between_attack: 1
+  shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
+  shotSpawn: {fileID: 4487462700546324}
+  shotSpawnTwo: {fileID: 4149086621636132}
 --- !u!114 &114235600663052356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,20 +968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &114413387572411448
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1374272314702004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time_between_attack: 2
-  shot: {fileID: 1415358122346260, guid: 4906edd1c7d434100a1d9380d697257c, type: 2}
-  shotSpawn: {fileID: 4149086621636132}
 --- !u!114 &114508392546237068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -979,7 +981,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1137423131854234, guid: 2138b97d699194f8d93ac046c28549f2, type: 2}
   score_value: 200
---- !u!114 &114512812671708242
+--- !u!114 &114774630655912768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374272314702004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af3afc3b7d6447aa80ec6613be3f0dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 3
+  shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
+  shotSpawn: {fileID: 4487462700546324}
+  shotSpawnTwo: {fileID: 4149086621636132}
+--- !u!114 &114905001952721082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058674273012426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af3afc3b7d6447aa80ec6613be3f0dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 11
+  shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
+  shotSpawn: {fileID: 4487462700546324}
+  shotSpawnTwo: {fileID: 4149086621636132}
+--- !u!114 &114932512790938436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -987,13 +1019,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1139631012397296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af3afc3b7d6447aa80ec6613be3f0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 4
-  shot: {fileID: 1415358122346260, guid: 4906edd1c7d434100a1d9380d697257c, type: 2}
-  shotSpawn: {fileID: 4149086621636132}
---- !u!114 &114632524676365558
+  time_between_attack: 8
+  shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
+  shotSpawn: {fileID: 4487462700546324}
+  shotSpawnTwo: {fileID: 4149086621636132}
+--- !u!114 &114983262322140448
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1001,12 +1034,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740672048338398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce429c0484884426b3c0b685bce0cab, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af3afc3b7d6447aa80ec6613be3f0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_between_attack: 3
-  shot: {fileID: 1415358122346260, guid: 4906edd1c7d434100a1d9380d697257c, type: 2}
-  shotSpawn: {fileID: 4149086621636132}
+  time_between_attack: 5
+  shot: {fileID: 1415358122346260, guid: 90c9d8f06a4444a42b243a106e5ddc11, type: 2}
+  shotSpawn: {fileID: 4487462700546324}
+  shotSpawnTwo: {fileID: 4149086621636132}
 --- !u!212 &212085407912723004
 SpriteRenderer:
   m_ObjectHideFlags: 1

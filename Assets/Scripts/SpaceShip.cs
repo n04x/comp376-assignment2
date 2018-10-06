@@ -9,6 +9,7 @@ public class SpaceShip : MonoBehaviour {
 	private float VERTICAL_LIMIT = 4;
 	Rigidbody2D ssRigidbody;
 	Animator dmg_animation;
+	SpriteRenderer sprite_renderer;
 	public GameObject shot;
 	public GameObject shot_level2;
 	public GameObject shot_level3;
@@ -27,6 +28,7 @@ public class SpaceShip : MonoBehaviour {
 		is_invincible = false;
 		ssRigidbody = GetComponent<Rigidbody2D>();
 		ssLaserSound = this.GetComponent<AudioSource>();
+		sprite_renderer = GetComponentInChildren<SpriteRenderer>();
 		dmg_animation = GetComponentInChildren<Animator>();
 	}
 	
@@ -34,13 +36,12 @@ public class SpaceShip : MonoBehaviour {
 	void Update () {
 		// Check if our ship has lives left.
 		if(lives == 0) {
-			Destroy(gameObject);
-			space_ship_explosion_temp = Instantiate(explosion, transform.position, Quaternion.identity);
-			Destroy(space_ship_explosion_temp);
+			StartCoroutine(KillOnAnimationEnd());
 		}
 		if(is_invincible) {
 			InvincibleTrigger();
 		}
+
 		// instantiate our shooting of bolt.
 		if(Input.GetKeyDown("space") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
@@ -75,7 +76,13 @@ public class SpaceShip : MonoBehaviour {
 	public void Upgrade() {
 		lives++;
 	}
-
+	IEnumerator KillOnAnimationEnd() {
+		this.sprite_renderer.enabled = false;
+		space_ship_explosion_temp = Instantiate(explosion, transform.position, Quaternion.identity);			
+		yield return new WaitForSeconds(0.5f);
+		Destroy(gameObject);
+		Destroy(space_ship_explosion_temp);
+	}
 	IEnumerator InvincibleTrigger() {
 		yield return new WaitForSeconds(1.2f);
 		is_invincible = false;
@@ -88,4 +95,5 @@ public class SpaceShip : MonoBehaviour {
 			lives--;
 		}
 	}
+
 }

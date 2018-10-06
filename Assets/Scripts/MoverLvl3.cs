@@ -15,5 +15,6 @@ public class MoverLvl3 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		 transform.Translate (direction * Vector2.right * speed * Time.deltaTime);
+		 Debug.Log(direction * Vector2.right * speed * Time.deltaTime);
 	}
 }
