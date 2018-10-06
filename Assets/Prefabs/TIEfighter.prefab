@@ -1111,6 +1111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114061012621492050
 MonoBehaviour:
@@ -1166,6 +1168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114203563042738548
 MonoBehaviour:
@@ -1205,6 +1209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114271796521964306
 MonoBehaviour:
@@ -1218,6 +1224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114687921285642196
 MonoBehaviour:
@@ -1231,6 +1239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114701612577697762
 MonoBehaviour:
@@ -1244,6 +1254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114741812906936924
 MonoBehaviour:
@@ -1285,6 +1297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1274516596014194, guid: 2adca2daf0c6a45adad9a36cddd773a0, type: 2}
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
   score_value: 100
 --- !u!114 &114881320120257738
 MonoBehaviour:

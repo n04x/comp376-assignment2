@@ -24,7 +24,7 @@ public class DeathStarHealth : MonoBehaviour {
 	}
 
 	void UpdateHealth() {
-		hp_text.text = "Boss Health Point: " + hp_value;
+		hp_text.text = "boss hp: " + hp_value;
 	}
 
 	public bool HPisZero() {

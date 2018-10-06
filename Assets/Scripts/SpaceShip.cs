@@ -36,7 +36,8 @@ public class SpaceShip : MonoBehaviour {
 	void Update () {
 		// Check if our ship has lives left.
 		if(lives == 0) {
-			StartCoroutine(KillOnAnimationEnd());
+			Destroy(gameObject);
+			// StartCoroutine(KillOnAnimationEnd());
 		}
 		if(is_invincible) {
 			InvincibleTrigger();
@@ -71,8 +72,14 @@ public class SpaceShip : MonoBehaviour {
 	}
 	public void DamageTaken() {
 		lives--;
+		if(lives != 0) {
+			dmg_animation.Play("playerHit");
+			is_invincible = true;
+		}
 	}
-
+	public int GetHP() {
+		return lives;
+	}
 	public void Upgrade() {
 		lives++;
 	}
@@ -87,13 +94,4 @@ public class SpaceShip : MonoBehaviour {
 		yield return new WaitForSeconds(1.2f);
 		is_invincible = false;
 	}
-	void OnTriggerEnter2D(Collider2D other) {
-		if(other.tag == "EnemyBolt" && !is_invincible) {
-			Destroy(other.gameObject);
-			dmg_animation.Play("playerHit");
-			is_invincible = true;
-			lives--;
-		}
-	}
-
 }

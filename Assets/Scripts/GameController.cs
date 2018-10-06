@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	
@@ -12,6 +13,8 @@ public class GameController : MonoBehaviour {
 	public GameObject death_star_health_object;
 
 	public Text score_board;
+	public Text game_over_text;
+	public Text restart_text;
 	
 	public Vector3 tie_fighter_spawn_pos;
 	public Vector3 star_destroyer_spawn_pos;
@@ -25,7 +28,14 @@ public class GameController : MonoBehaviour {
 	private int score;
 	private int tie_destroyed_counter;
 	private float bonus_timer;
+	private bool gameOver;
+	private bool restart;
+
 	void Start() {
+		gameOver = false;
+		restart = false;
+		restart_text.text = "";
+        game_over_text.text = "";
 		score = 0;
 		tie_destroyed_counter = 0;
 		UpdateScore();
@@ -35,6 +45,11 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update() {
+		if(restart) {
+			if(Input.GetKeyDown(KeyCode.R)) {
+				SceneManager.LoadScene(0);
+			}
+		}
 		if(tie_destroyed_counter > 0) {
 			bonus_timer += Time.deltaTime;
 		} 
@@ -45,6 +60,10 @@ public class GameController : MonoBehaviour {
 		} else if(tie_destroyed_counter < 7 && bonus_timer > 6){
 			tie_destroyed_counter = 0;
 			bonus_timer = 0;
+		}
+		if(gameOver) {
+			restart_text.text = "press 'r' for restart";
+           	restart = true;
 		}
 	}
 	IEnumerator SpawnTIEFighter() {
@@ -81,6 +100,11 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void UpdateScore() {
-		score_board.text = "Score: " + score;
+		score_board.text = "score: " + score;
 	}
+	public void GameOver ()
+    {
+        game_over_text.text = "game over!";
+        gameOver = true;
+    }
 }

@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4616649915154290}
   - component: {fileID: 50010648093185328}
   - component: {fileID: 61870639997748036}
+  - component: {fileID: 114587445797120552}
   - component: {fileID: 114391138502321294}
   m_Layer: 0
   m_Name: DeathStarBolt
@@ -187,3 +188,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -20
+--- !u!114 &114587445797120552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415358122346260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc893b24fe42b4fb79377ef01039d5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerExplosion: {fileID: 1157301988609750, guid: 91d44906bf0aa4ccf9a61065892a5f73,
+    type: 2}
